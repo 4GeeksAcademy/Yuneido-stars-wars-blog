@@ -8,7 +8,6 @@ const Details = () => {
   const { store } = useContext(Context);
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const [body, setBody] = useState(null);
 
   const renderSpecs = () => {
     if (type === "characters") {

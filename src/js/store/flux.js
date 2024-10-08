@@ -16,9 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			makeRequest: async (noun) => {
 				const store = getStore()
-
 				const storage = window.localStorage;
-				
 				// Revisamos si ya hay datos en el localStorage
 				if (storage.getItem(noun)) {
 					console.log(`Se ha conseguido información de ${noun} en el Local Storage`);
@@ -31,7 +29,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				if (!store.loading) {
 				setStore({loading: true})	
 				}
-				
 				// Si no hay datos en el Local Storage, hacemos la solicitud a la API
 				try {
 					const response = await fetch(`${BASEURL}/${noun}`);
